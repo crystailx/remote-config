@@ -1,0 +1,197 @@
+schedule:
+  cron: "0 0 1 * * ?"
+  fire-on-start: true
+  reload-config:
+    trigger: BeforeJob
+app:
+  version: 1
+  anime:
+    - id: seiyuu
+      source:
+        site: acgrip
+        search:
+          type: url
+          url: "https://acgrip.art/?term=LoliHouse+恰如细语般的恋歌"
+        rules: []
+      target:
+        download:
+          type:  qbit
+    - id: sasayaku
+      source:
+        site: acgrip
+        search:
+          type: keyword
+          keyword: "【喵萌奶茶屋】★04月新番★ 恋语轻唱   恰如细语般的恋歌   ささやくように恋を呗う   Sasayaku You ni Koi wo Utau  繁日双语"
+        rules:
+          - within(1d1h)
+      target:
+        download:
+          type:  qbit
+    - id: yozakura
+      source:
+        site: acgrip
+        search:
+          type: keyword
+          keyword: "LoliHouse  夜樱家的大作战"
+        rules:
+          - within(1d1h)
+      target:
+        download:
+          type:  qbit
+    - id: wise-wolf
+      source:
+        site: acgrip
+        search:
+          type: keyword
+          keyword: "桜都字幕组  狼与香辛料  简繁内封"
+        rules:
+          - within(1d1h)
+      target:
+        download:
+          type:  qbit
+    - id: roshidere
+      source:
+        site: acgrip
+        search:
+          type: keyword
+          keyword: "喵萌奶茶屋 LoliHouse 艾莉同学"
+        rules:
+          - within(1d1h)
+      target:
+        download:
+          type:  qbit
+    - id: shinmai-ossan
+      source:
+        site: acgrip
+        search:
+          type: keyword
+          keyword: "ANi  新人大叔冒险者"
+        rules:
+          - within(1d1h)
+      target:
+        download:
+          type:  qbit
+    - id: maougun-ningen
+      source:
+        site: acgrip
+        search:
+          type: keyword
+          keyword: "LoliHouse  魔王军最强的魔术师是人类"
+        rules:
+          - within(1d1h)
+      target:
+        download:
+          type:  qbit
+    - id: yoasobi
+      source:
+        site: acgrip
+        search:
+          type: keyword
+          keyword: "桜都 夜游生活 繁体内"
+        rules:
+          - within(1d1h)
+      target:
+        download:
+          type:  qbit
+    - id: shikanoko
+      source:
+        site: acgrip
+        search:
+          type: keyword
+          keyword: "喵萌奶茶屋 LoliHouse  鹿乃子乃子乃子虎视眈眈"
+        rules:
+          - within(1d1h)
+      target:
+        download:
+          type:  qbit
+    - id: ramen-akaneko
+      source:
+        site: acgrip
+        search:
+          type: keyword
+          keyword: "ANi 拉麵赤猫"
+        rules:
+          - within(1d1h)
+      target:
+        download:
+          type:  qbit
+    - id: tensui-hime
+      source:
+        site: acgrip
+        search:
+          type: keyword
+          keyword: "LoliHouse 天穗之咲稻姬"
+        rules:
+          - within(1d1h)
+      target:
+        download:
+          type:  qbit
+    - id: mob-kara
+      source:
+        site: acgrip
+        search:
+          type: keyword
+          keyword: "ANi 从路人角色开始的探索英雄谭"
+        rules:
+          - within(2d1h)
+      target:
+        download:
+          type:  qbit
+    - id: parry
+      source:
+        site: acgrip
+        search:
+          type: keyword
+          keyword: "ANi 我要【招架】一切"
+        rules:
+          - within(14d1h)
+      target:
+        download:
+          type:  qbit
+    - id: mahoaku
+      source:
+        site: acgrip
+        search:
+          type: keyword
+          keyword: "LoliHouse 曾经、魔法少女和邪恶相互为敌"
+        rules:
+          - within(14d1h)
+      target:
+        download:
+          type:  qbit
+    - id: mahoaku-sub
+      source:
+        site: acgrip
+        search:
+          type: url
+          url: "https://acgrip.art/?term=北宇治字幕组+魔法少女与恶曾是敌人+繁日"
+        rules:
+          - within(1d1h)
+      target:
+        download:
+          type:  qbit
+    - id: makeine
+      source:
+        site: acgrip
+        search:
+          type: keyword
+          keyword: "喵萌 女主太多 繁日"
+        rules:
+          - within(1d1h)
+      target:
+        download:
+          type:  qbit
+    - id: gijiharem
+      source:
+        site: acgrip
+        search:
+          type: keyword
+          keyword: "LoliHouse 模拟后宫体验"
+        rules:
+          - within(1d1h)
+      target:
+        download:
+          type:  qbit
+          clearFinished: true
+  post-process:
+    script-file: /Users/changyenh/Downloads/downloaded/process.sh
