@@ -192,6 +192,16 @@ app:
       target:
         download:
           type:  qbit
+    - id: tenten
+      source:
+        site: acgrip
+        search:
+          type: url
+          url: "https://acgrip.art/?term=%E8%BD%AC%E7%94%9F%E5%85%AC%E4%B8%BB%E4%B8%8E%E5%A4%A9%E6%89%8D+LoliHouse"
+        rules: []
+      target:
+        download:
+          type: qbit
           clearFinished: true
   post-process:
     script-file: /Users/changyenh/Downloads/downloaded/process.sh
